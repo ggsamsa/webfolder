@@ -1,0 +1,10 @@
+bin\Debug\WebFolder.exe
+bin\Debug\WebFolder.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\WebFolder.principal.resources
+obj\Debug\WebFolder.Properties.Resources.resources
+obj\Debug\WebFolder.csproj.GenerateResource.Cache
+obj\Debug\WebFolder.exe
+obj\Debug\WebFolder.pdb
+obj\Debug\WebFolder.Sobre.resources
+obj\Debug\WebFolder.Proproj.resources

@@ -1,0 +1,125 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8FE03F05-2470-464F-BABC-FC19D485B872}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebFolder</RootNamespace>
+    <AssemblyName>WebFolder</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BD.cs" />
+    <Compile Include="Definicoes.cs" />
+    <Compile Include="Filtro.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FiltroData.cs" />
+    <Compile Include="FiltroDataMaior.cs" />
+    <Compile Include="FiltroDataMenor.cs" />
+    <Compile Include="FiltroNome.cs" />
+    <Compile Include="FiltroOu.cs" />
+    <Compile Include="FiltroTamanho.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FiltroTamanhoMaior.cs" />
+    <Compile Include="FiltroTamanhoMenor.cs" />
+    <Compile Include="FiltroTipo.cs" />
+    <Compile Include="FiltroTipoDiferente.cs" />
+    <Compile Include="FiltroTipoIgual.cs" />
+    <Compile Include="GestaoUrls.cs" />
+    <Compile Include="Motor.cs" />
+    <Compile Include="MyGravar.cs" />
+    <Compile Include="MyWebRequest.cs" />
+    <Compile Include="principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="principal.Designer.cs">
+      <DependentUpon>principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Projecto.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="principal.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Proproj.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Proproj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sobre.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Sobre.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Proproj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Proproj.Designer.cs">
+      <DependentUpon>Proproj.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sobre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sobre.Designer.cs">
+      <DependentUpon>Sobre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Url.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="projectos.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
